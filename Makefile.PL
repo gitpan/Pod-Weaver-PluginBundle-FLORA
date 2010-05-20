@@ -9,28 +9,28 @@ use ExtUtils::MakeMaker 6.31;
 
 
 my %WriteMakefileArgs = (
-                       'test' => {
-                                   'TESTS' => 't/*.t'
-                                 },
-                       'NAME' => 'Pod::Weaver::PluginBundle::FLORA',
-                       'DISTNAME' => 'Pod-Weaver-PluginBundle-FLORA',
-                       'CONFIGURE_REQUIRES' => {
-                                                 'ExtUtils::MakeMaker' => '6.31'
-                                               },
-                       'AUTHOR' => 'Florian Ragwitz <rafl@debian.org>',
-                       'BUILD_REQUIRES' => {
-                                             'Test::More' => '0'
-                                           },
-                       'ABSTRACT' => 'Document your modules like FLORA does',
-                       'EXE_FILES' => [],
-                       'VERSION' => '0.01',
-                       'PREREQ_PM' => {
-                                        'namespace::clean' => '0',
-                                        'Pod::Elemental::Transformer::List' => '0',
-                                        'Pod::Weaver::Config::Assembler' => '0'
-                                      },
-                       'LICENSE' => 'perl'
-                     );
+  'ABSTRACT' => 'Document your modules like FLORA does',
+  'AUTHOR' => 'Florian Ragwitz <rafl@debian.org>',
+  'BUILD_REQUIRES' => {
+    'Test::More' => '0'
+  },
+  'CONFIGURE_REQUIRES' => {
+    'ExtUtils::MakeMaker' => '6.31'
+  },
+  'DISTNAME' => 'Pod-Weaver-PluginBundle-FLORA',
+  'EXE_FILES' => [],
+  'LICENSE' => 'perl',
+  'NAME' => 'Pod::Weaver::PluginBundle::FLORA',
+  'PREREQ_PM' => {
+    'Pod::Elemental::Transformer::List' => '0',
+    'Pod::Weaver::Config::Assembler' => '0',
+    'namespace::clean' => '0'
+  },
+  'VERSION' => '0.02',
+  'test' => {
+    'TESTS' => 't/*.t'
+  }
+);
 
 
 unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
