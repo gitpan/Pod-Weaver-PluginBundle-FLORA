@@ -6,7 +6,7 @@ BEGIN {
   $Pod::Weaver::PluginBundle::FLORA::AUTHORITY = 'cpan:FLORA';
 }
 BEGIN {
-  $Pod::Weaver::PluginBundle::FLORA::VERSION = '0.02';
+  $Pod::Weaver::PluginBundle::FLORA::VERSION = '0.03';
 }
 # ABSTRACT: Document your modules like FLORA does
 
@@ -40,6 +40,7 @@ sub mvp_bundle_config {
         [ '@FLORA/Legal',     _exp('Legal'),        {} ],
 
         [ '@FLORA/List',      _exp('-Transformer'), { transformer => 'List' } ],
+        [ '@FLORA/Encoding',  _exp('-Encoding'),    {} ],
     );
 }
 
@@ -101,11 +102,13 @@ This plugin bundle is equivalent to the following weaver.ini file:
   [-Transformer]
   transformer = List
 
+  [-Encoding]
+
 =for Pod::Coverage mvp_bundle_config
 
 =head1 AUTHOR
 
-  Florian Ragwitz <rafl@debian.org>
+Florian Ragwitz <rafl@debian.org>
 
 =head1 COPYRIGHT AND LICENSE
 
